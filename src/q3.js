@@ -1,4 +1,3 @@
-
 /*
     Understand pass by reference with the following articles:
     - https://www.geeksforgeeks.org/pass-by-value-and-pass-by-reference-in-javascript/
@@ -18,12 +17,11 @@
 */
 
 const dog = {
-    breed: "dog"
-}
+  breed: "dog", // object call dog; property 'breed' set to dog
+};
 
-const cat = dog; // Modify this line
+const cat = { ...dog }; // Modify this line
 
 cat.breed = "cat";
 
 console.log("dog", dog); // If success, prints "dog { breed: 'dog' }"
-
